@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="OA@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.2">
+    <root id="1"/>
+    <schema id="2" parent="1" name="OA">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="hospital"/>
+    <schema id="4" parent="1" name="information_schema"/>
+    <schema id="5" parent="1" name="mybatis"/>
+    <schema id="6" parent="1" name="myfriend"/>
+    <schema id="7" parent="1" name="mysql"/>
+    <schema id="8" parent="1" name="student"/>
+    <schema id="9" parent="1" name="test"/>
+    <table id="10" parent="2" name="t_dept"/>
+    <table id="11" parent="2" name="t_docment"/>
+    <table id="12" parent="2" name="t_document_form"/>
+    <table id="13" parent="2" name="t_emp"/>
+    <table id="14" parent="2" name="t_process_define"/>
+    <table id="15" parent="2" name="t_process_node_define"/>
+    <table id="16" parent="2" name="t_process_node_record"/>
+    <table id="17" parent="2" name="t_process_record"/>
+    <column id="18" parent="10" name="deptid">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="19" parent="10" name="deptname">
+      <Position>2</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="20" parent="10" name="updeptid">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="21" parent="10" name="isuse">
+      <Position>4</Position>
+      <DataType>int(1)|0</DataType>
+    </column>
+    <key id="22" parent="10" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>deptid</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="23" parent="11" name="docid">
+      <Position>1</Position>
+      <DataType>int(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="24" parent="11" name="docname">
+      <Position>2</Position>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <column id="25" parent="11" name="docupload">
+      <Position>3</Position>
+      <DataType>varchar(1000)|0</DataType>
+    </column>
+    <column id="26" parent="11" name="docjsp">
+      <Position>4</Position>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <key id="27" parent="11" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>docid</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="28" parent="12" name="fieldid">
+      <Position>1</Position>
+      <DataType>int(22)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="29" parent="12" name="prid">
+      <Position>2</Position>
+      <DataType>int(22)|0</DataType>
+    </column>
+    <column id="30" parent="12" name="docid">
+      <Position>3</Position>
+      <DataType>int(22)|0</DataType>
+    </column>
+    <column id="31" parent="12" name="fieldtag">
+      <Position>4</Position>
+      <DataType>varchar(22)|0</DataType>
+    </column>
+    <column id="32" parent="12" name="fieldname">
+      <Position>5</Position>
+      <DataType>varchar(22)|0</DataType>
+    </column>
+    <column id="33" parent="12" name="fieldvalue">
+      <Position>6</Position>
+      <DataType>varchar(22)|0</DataType>
+    </column>
+    <key id="34" parent="12" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>fieldid</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="35" parent="13" name="empid">
+      <Position>1</Position>
+      <DataType>int(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="36" parent="13" name="empname">
+      <Position>2</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="37" parent="13" name="deptid">
+      <Position>3</Position>
+      <DataType>int(20)|0</DataType>
+    </column>
+    <key id="38" parent="13" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>empid</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="39" parent="14" name="pid">
+      <Position>1</Position>
+      <DataType>int(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="40" parent="14" name="pname">
+      <Position>2</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="41" parent="14" name="docid">
+      <Position>3</Position>
+      <DataType>int(20)|0</DataType>
+    </column>
+    <key id="42" parent="14" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>pid</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="43" parent="15" name="nodeid">
+      <Position>1</Position>
+      <Comment>点节序号</Comment>
+      <DataType>int(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="44" parent="15" name="nodeno">
+      <Position>2</Position>
+      <Comment>点节编号</Comment>
+      <DataType>int(20)|0</DataType>
+    </column>
+    <column id="45" parent="15" name="pid">
+      <Position>3</Position>
+      <Comment>流程编号</Comment>
+      <DataType>int(20)|0</DataType>
+    </column>
+    <column id="46" parent="15" name="nodename">
+      <Position>4</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="47" parent="15" name="nodetype">
+      <Position>5</Position>
+      <DataType>int(20)|0</DataType>
+    </column>
+    <column id="48" parent="15" name="nodebackid">
+      <Position>6</Position>
+      <DataType>int(20)|0</DataType>
+    </column>
+    <key id="49" parent="15" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>nodeid</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="50" parent="16" name="pnrid">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="51" parent="16" name="nodeid">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="52" parent="16" name="prid">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="53" parent="16" name="empid">
+      <Position>4</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="54" parent="16" name="isagree">
+      <Position>5</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="55" parent="16" name="advice">
+      <Position>6</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="56" parent="16" name="pnrtime">
+      <Position>7</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <key id="57" parent="16" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>pnrid</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="58" parent="17" name="prid">
+      <Position>1</Position>
+      <DataType>int(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="59" parent="17" name="empid">
+      <Position>2</Position>
+      <DataType>int(20)|0</DataType>
+    </column>
+    <column id="60" parent="17" name="docid">
+      <Position>3</Position>
+      <DataType>int(20)|0</DataType>
+    </column>
+    <column id="61" parent="17" name="prtitle">
+      <Position>4</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="62" parent="17" name="status">
+      <Position>5</Position>
+      <DataType>int(20)|0</DataType>
+    </column>
+    <column id="63" parent="17" name="starttime">
+      <Position>6</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="64" parent="17" name="endtime">
+      <Position>7</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="65" parent="17" name="backnodeid">
+      <Position>8</Position>
+      <DataType>int(20)|0</DataType>
+    </column>
+    <key id="66" parent="17" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>prid</ColNames>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>
