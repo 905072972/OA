@@ -76,7 +76,7 @@
 
     <!-- Application Context (depends on spring-core, spring-expression, spring-aop,
 
-    spring-beans) This is the central artifact for Spring's Dependency Injection
+    spring-beans) This is the central artifact for SprDeptControllerng's Dependency Injection
 
     Container and is generally always defined -->
 
@@ -122,7 +122,7 @@
 
     <!-- JDBC Data Access Library (depends on spring-core, spring-beans, spring-context,
 
-    spring-tx) Define this if you use Spring's JdbcTemplate API (org.springframework.jdbc.*) -->
+    spring-tx) Define this if you use SprDeptControllerng's JdbcTemplate API (org.springframework.jdbc.*) -->
 
     <dependency>
 
